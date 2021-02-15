@@ -1,0 +1,49 @@
+Ecommerce - Stream
+
+Предположим у нас есть софт, который "помогает" компании выбирать и брать на работу будущих сотрудников. Основной класс компании Компания в пакете "co" (сокр - компания). В подпакете "co.departments" находятся классы департаментов компании (их в итоге мы вложим в объект компании). В подпакете "co.jobs" есть профессии и классы соответствующие "внутри компании".
+
+Начните с структуры:
+
+КомпанияComplexOOPExample 
+ - src /
+   - main 
+     - Application ( Class + static  main ( ) ) 
+   - co 
+     - Компания   
+   - co . отделы 
+     - КомпанияHRDepartment 
+     - КомпанияITDepartment 
+   - co . вакансии 
+     - DeveloperInterface 
+     - TesterInterface 
+   - тесты 
+     - SimpleTest ( Class )  
+ОБРАТИТЕ ВНИМАНИЕ! что формула названия под пакетов сводится к "parent.child.descedant. ..."!
+
+Код класса компании
+
+открытый  класс  Компания {
+   частное  строковое имя;  
+  частный  int год;  
+  частная  компанияHRDepartment hr;
+  частная  компания ITDepartment it;
+  // ... 
+}
+где имя - имя компании, год - год ее основания, КомпанияHRDepartment - объект департамента кадров, CompanyITDepartment - объект департамента IT.
+
+Добавить конструкторы, гет / сет и toString () для компании!
+
+Код класса департамента HR
+
+public  class  CompanyHRDepartment {
+
+  частная  компания компания;
+
+  общественное  логическое  hireDeveloper ( DeveloperInterface  разработчик ) {
+      
+  }  
+  public  boolean  rentalTester ( TesterInterface  tester ) {
+
+  }  
+  // ... 
+}
